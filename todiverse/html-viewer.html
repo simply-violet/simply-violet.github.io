@@ -1,8 +1,16 @@
-<html><head>
-  
-</head>
-<body>
-  <script type="module">
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html-viewer</title>
+    
+    
+  </head>
+  <body>
+    <script type="module">
     import { fetchPondiverseCreation } from "https://www.pondiverse.com/pondiverse.js";
 
 const creationParam = new URL(window.location).searchParams.get("id");
@@ -10,4 +18,7 @@ if (creationParam) {
   const creation = await fetchPondiverseCreation(creationParam);
   console.log(creation)
 }
-</body></html>
+
+    </script>
+  </body>
+</html>
