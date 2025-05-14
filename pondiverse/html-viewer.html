@@ -34,7 +34,7 @@ if (creationParam) {
   const creation = await fetchPondiverseCreation(creationParam);
   console.log(creation)
   const cleanC = DOMPurify.sanitize(creation.data);
-  if(clean != creation.data){
+  if(cleanC != creation.data){
     document.getElementById("fot-warn").style.display = "block";
     document.getElementById("js-a-btn").onclick = function() {
       document.getElementById("fot-warn").style.display = "none";
