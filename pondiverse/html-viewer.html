@@ -35,10 +35,16 @@ if (creationParam) {
   console.log(creation)
     clean = DOMPurify.sanitize(creation.data);
   if(clean != creation.data){
-    document.getElementById("fot-warn").style.display(block);
+    document.getElementById("fot-warn").style.display = "block";
+    document.getElementById("js-a-btn").onclick = function() {
+      document.getElementById("fot-warn").style.display = "none";
+      document.getElementById("ccontainer").innerHTML = creation.data;
+      document.getElementById("js-a-btn").onclick = null;
+    }
   }
   document.getElementById("ccontainer").innerHTML = clean
 }
+      
 
     </script>
   </body>
